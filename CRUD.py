@@ -1,13 +1,20 @@
 import mysql.connector
 import streamlit as st
 import pandas as pd
+import toml
 
-# Establish a connection to mysql server
-mydb = mysql.connector.connect (
-    host="localhost",
-    user="root",
-    password="Princessfranz02",
-    database="dbCandletonia"
+# Load secrets from secrets.toml
+secrets = toml.load('secrets.toml')
+
+# Extract database connection details
+db_config = secrets['database']
+
+# Establish a connection to MySQL server
+mydb = mysql.connector.connect(
+    host=db_config['host'],
+    user=db_config['user'],
+    password=db_config['password'],
+    database=db_config['database']
 )
 
 mycursor = mydb.cursor()
