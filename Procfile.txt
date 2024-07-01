@@ -1,1 +1,0 @@
-web: streamlit run CRUD.py --server.port $PORT
