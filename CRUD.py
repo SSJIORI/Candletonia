@@ -1,7 +1,6 @@
 import mysql.connector
 import streamlit as st
 import pandas as pd
-import os
 
 # Establish a connection to MySQL server
 mydb = mysql.connector.connect(
@@ -17,7 +16,6 @@ print("Connection established!")
 # Create Streamlit App
 
 def main():
-    port = os.getenv('PORT', 8080)
     st.title("Candletonia Database")
     
     menu = ["Inventory", "Supplier", "Shipping Details", "Payment Mode", "Customer Details", "Order Details"]
