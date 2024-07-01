@@ -11,12 +11,6 @@ env_variables:
   MYSQL_DATABASE: 'dbCandletonia'
   MYSQL_PORT: '3306'
 
-# Automatic scaling settings (adjust based on your expected traffic)
-automatic_scaling:
-  min_instances: 1
-  max_instances: 5
-  target_cpu_utilization: 0.65
-
 # Specify the entrypoint command to run your Streamlit application
 entrypoint: streamlit run CRUD.py --server.port $PORT
 
