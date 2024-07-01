@@ -15,6 +15,12 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 8501
 
+# Define environment variables
+ENV MYSQL_HOST=host.docker.internal
+ENV MYSQL_DATABASE=dbCandletonia
+ENV MYSQL_USER=root
+ENV MYSQL_PASSWORD=Princessfranz02
+
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health 
 
 ENTRYPOINT ["streamlit", "run", "CRUD.py", "--server.port=8501", "--server.address=0.0.0.0"]
