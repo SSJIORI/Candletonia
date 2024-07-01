@@ -1,21 +1,23 @@
-runtime: python39  # Use Python 3.9 or your preferred version
+runtime: python39
+env: flex
 
-instance_class: F2  # Adjust instance class based on your application's needs
+instance_class: F2
 
 # Environment variables for connecting to your localhost MySQL database
 env_variables:
   MYSQL_HOST: 'localhost'
   MYSQL_USER: 'root'
-  MYSQL_PASSWORD: 'Princessfranz0s2'
+  MYSQL_PASSWORD: 'Princessfranz02'
   MYSQL_DATABASE: 'dbCandletonia'
-  MYSQL_PORT: '3306'  # Adjust port if necessary, default is 3306
+  MYSQL_PORT: '3306'
 
 # Automatic scaling settings (adjust based on your expected traffic)
 automatic_scaling:
   min_instances: 1
-  max_instances: 5  # Adjust based on your scalability needs
-  target_cpu_utilization: 0.65  # Adjust based on your application's CPU usage
+  max_instances: 5
+  target_cpu_utilization: 0.65
 
+# Specify the entrypoint command to run your Streamlit application
 entrypoint: streamlit run CRUD.py --server.port $PORT
 
 # Health check endpoint configuration
