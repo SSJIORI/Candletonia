@@ -6,7 +6,7 @@ instance_class: F2  # Adjust instance class based on your application's needs
 env_variables:
   MYSQL_HOST: 'localhost'
   MYSQL_USER: 'root'
-  MYSQL_PASSWORD: 'Princessfranz02'
+  MYSQL_PASSWORD: 'Princessfranz0s2'
   MYSQL_DATABASE: 'dbCandletonia'
   MYSQL_PORT: '3306'  # Adjust port if necessary, default is 3306
 
