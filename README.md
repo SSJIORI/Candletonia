@@ -1,5 +1,3 @@
-Sure, here's a README guide for your Streamlit app:
-
 ---
 
 # Candletonia Streamlit App
