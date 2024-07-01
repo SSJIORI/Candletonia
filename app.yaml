@@ -1,4 +1,4 @@
-runtime: python39
+runtime: python310
 env: flex
 
 instance_class: F2
