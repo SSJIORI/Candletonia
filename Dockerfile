@@ -18,6 +18,9 @@ RUN git clone https://github.com/SSJIORI/Candletonia.git .
 # Set the working directory to the cloned repository
 WORKDIR /app/Candletonia
 
+# Copy requirements.txt separately to leverage Docker cache
+COPY requirements.txt ./
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
