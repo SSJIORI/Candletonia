@@ -17,7 +17,7 @@ print("Connection established!")
 # Create Streamlit App
 
 def main():
-    port = os.getenv('PORT', 8080)
+    port = os.getenv('PORT', 8501)
     st.title("Candletonia Database")
     
     menu = ["Inventory", "Supplier", "Shipping Details", "Payment Mode", "Customer Details", "Order Details"]
