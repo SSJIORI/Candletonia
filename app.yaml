@@ -2,6 +2,8 @@ runtime: python39  # Use Python 3.9 or your preferred version
 
 instance_class: F2  # Adjust instance class based on your application's needs
 
+entrypoint: web: streamlit run CRUD.py --server.port $PORT
+
 # Environment variables for connecting to your localhost MySQL database
 env_variables:
   MYSQL_HOST: 'localhost'
